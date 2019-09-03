@@ -1,0 +1,38 @@
+﻿@model CrudAspCore.Models.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Excluir</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nascimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Credito)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Credito)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ClienteId" />
+        <input type="submit" value="Excluir"  class="btn btn-danger" /> |
+        <a asp-action="Index"  class="btn btn-primary">Voltar à Lista</a>
+    </form>
+</div>

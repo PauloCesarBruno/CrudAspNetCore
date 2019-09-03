@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon>wwwroot\Hospitalar.ico</ApplicationIcon>
+    <Win32Resource></Win32Resource>
+    <StartupObject></StartupObject>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <RootNamespace>CrudAspCore</RootNamespace>
+    <AssemblyName>CrudAspCore</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\img\Csharp.jpg" />
+    <None Include="wwwroot\img\Custos.png" />
+    <None Include="wwwroot\img\Entrada_Paciente.png" />
+    <None Include="wwwroot\img\erro.jpg" />
+    <None Include="wwwroot\img\Hospitalar.png" />
+    <None Include="wwwroot\img\Multi.png" />
+    <None Include="wwwroot\img\Programador.jpg" />
+    <None Include="wwwroot\img\ti.jpg" />
+    <None Include="wwwroot\img\Triagem.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>

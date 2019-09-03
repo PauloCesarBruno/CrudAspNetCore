@@ -1,0 +1,56 @@
+﻿@*@using WebApplicationCep.Models;*@
+@model Cep
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Utilitário Consultar End. pelo CEP.</h2>
+    <p class="lead">Consultando CEP nos correios</p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        @using (Html.BeginForm("Index", "Correios", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            <div class="form-group">
+                <div class="input-group">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(m => m.Codigo, new { @class = "form-control" })
+                    <span class="input-group-btn">
+                        <input type="submit" value="Buscar" class="btn btn-success" />
+                    </span>
+
+                </div>
+            </div>
+            <br />
+            <div>
+                @Html.ValidationMessageFor(m => m.Codigo, "", new { @class = "text-danger" })
+            </div>
+        }
+
+
+        @{
+            Cep cep = new Cep(); // Instanciei a Classe Cep, onde tem o Codigo (Get,Set)
+            if (cep.Codigo == null) // Verifiquei se no Objeto Cep.Propriedade (Codigo) é Válido.
+            {
+                @ViewBag.ERRO // Se não existe retorna essas ViewBag´s criadas aqui.
+                @ViewBag.ERRO2
+                @ViewBag.ERRO3 
+            }
+        }
+
+        @{
+            if (ViewBag.Endereco != null)
+            {
+                @ViewBag.Endereco.Descricao @ViewBag.Endereco.Complemento
+                <br />
+                @ViewBag.Endereco.Bairro<br />
+                @ViewBag.Endereco.Cidade<br />
+                @ViewBag.Endereco.UF<br />
+            }
+        }
+
+
+    </div>
+</div>

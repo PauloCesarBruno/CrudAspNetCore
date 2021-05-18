@@ -1,7 +1,6 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using CrudAspCore.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Diagnostics;
 //==============================================================================================
 // Link Uri: https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl
 // Link GitHub: https://github.com/tborgesvieira/Web-Service-Client-Core
